@@ -28,15 +28,17 @@ echo <<<XML
   <Enable_CDP ua="na">Yes</Enable_CDP>
 //NTP
   <NTP_Enable ua="na">Yes</NTP_Enable>
-  <Primary_NTP_Server ua="na">$ntpprimary</Primary_NTP_Server>
-  <Secondary_NTP_Server ua="na">$ntpsecondary</Secondary_NTP_Server>
+  <Primary_NTP_Server ua="na">$ntp_primary</Primary_NTP_Server>
+  <Secondary_NTP_Server ua="na">$ntp_secondary</Secondary_NTP_Server>
 //Syslog
-  <Syslog_Server ua="na">$syslogserver</Syslog_Server>
+  <Syslog_Server ua="na">$syslog_server</Syslog_Server>
   <Debug_Server ua="na"></Debug_Server>
   <Debug_Level ua="na">0</Debug_Level>
   <Layer_2_Logging ua="na">No</Layer_2_Logging>
 //SIP
   <SIP_Reg_User_Agent_Name ua="na">$reg</SIP_Reg_User_Agent_Name>
+  <Reg_Retry_Intvl group="SIP/SIP_Timer_Values__sec_">$sip_reg_retry_int</Reg_Retry_Intvl>
+  <Reg_Retry_Long_Intvl group="SIP/SIP_Timer_Values__sec_">$sip_reg_retry_long_int</Reg_Retry_Long_Intvl>
 //EXT2-4
 //Disable 2-4 lines
   <Line_Enable_2_ ua="na">No</Line_Enable_2_>
@@ -46,7 +48,7 @@ echo <<<XML
 //Enable 1st line
   <Line_Enable_1_ ua="na">Yes</Line_Enable_1_>
 //Network
-  <Proxy_1_ ua="na">$sipproxy</Proxy_1_>
+  <Proxy_1_ ua="na">$sip_proxy</Proxy_1_>
   <SIP_Port_1_ ua="na">5060</SIP_Port_1_>
   <SIP_Transport_1_ ua="na">UDP</SIP_Transport_1_>
   <Register_Expires_1_ ua="na">300</Register_Expires_1_>
@@ -118,20 +120,20 @@ echo <<<XML
   <Screen_Saver_Enable ua="na">No</Screen_Saver_Enable>
 //OpenLDAP
   <LDAP_Dir_Enable ua="na">Yes</LDAP_Dir_Enable>
-  <LDAP_Corp_Dir_Name ua="na">$ldapname</LDAP_Corp_Dir_Name>
-  <LDAP_Server ua="na">$ldapserver</LDAP_Server>
-  <LDAP_Auth_Method ua="na">Simple</LDAP_Auth_Method>
-  <LDAP_Client_DN ua="na">$ldapdn</LDAP_Client_DN>
-  <LDAP_Username ua="na">$ldapuser</LDAP_Username>
-  <LDAP_Password ua="na">$ldappwd</LDAP_Password>
-  <LDAP_Search_Base ua="na">$ldapsearch</LDAP_Search_Base>
-  <LDAP_Last_Name_Filter ua="na">$ldapsn</LDAP_Last_Name_Filter>
-  <LDAP_First_Name_Filter ua="na">$ldapcn</LDAP_First_Name_Filter>
-  <LDAP_Search_Item_3 ua="na">$ldapdisplay3</LDAP_Search_Item_3>
-  <LDAP_Item_3_Filter ua="na">$ldapfilter3</LDAP_Item_3_Filter>
-  <LDAP_Search_Item_4 ua="na">$ldapdisplay4</LDAP_Search_Item_4>
-  <LDAP_item_4_Filter ua="na">$ldapfilter4</LDAP_item_4_Filter>
-  <LDAP_Display_Attrs ua="na">$ldapdisplay</LDAP_Display_Attrs>
+  <LDAP_Corp_Dir_Name ua="na">$ldap_name</LDAP_Corp_Dir_Name>
+  <LDAP_Server ua="na">$ldap_server</LDAP_Server>
+  <LDAP_Auth_Method ua="na">$ldap_auth_method</LDAP_Auth_Method>
+  <LDAP_Client_DN ua="na">$ldap_dn</LDAP_Client_DN>
+  <LDAP_Username ua="na">$ldap_user</LDAP_Username>
+  <LDAP_Password ua="na">$ldap_pwd</LDAP_Password>
+  <LDAP_Search_Base ua="na">$ldap_search</LDAP_Search_Base>
+  <LDAP_Last_Name_Filter ua="na">$ldap_sn</LDAP_Last_Name_Filter>
+  <LDAP_First_Name_Filter ua="na">$ldap_cn</LDAP_First_Name_Filter>
+  <LDAP_Search_Item_3 ua="na">$ldap_display3</LDAP_Search_Item_3>
+  <LDAP_Item_3_Filter ua="na">$ldap_filter3</LDAP_Item_3_Filter>
+  <LDAP_Search_Item_4 ua="na">$ldap_display4</LDAP_Search_Item_4>
+  <LDAP_item_4_Filter ua="na">$ldap_filter4</LDAP_item_4_Filter>
+  <LDAP_Display_Attrs ua="na">$ldap_display</LDAP_Display_Attrs>
   <LDAP_Number_Mapping ua="na"/>
 //USER
 //Speed Dial

@@ -5,26 +5,30 @@ $mysql_user = 'user';
 $mysql_pwd = 'passwd';
 $mysql_db = 'www_asterisk';
 //NTP
-$ntpprimary = 'ru.pool.ntp.org';
-$ntpsecondary = 'ntp1.stratum2.ru';
+$ntp_primary = 'ru.pool.ntp.org';
+$ntp_secondary = 'ntp1.stratum2.ru';
 //SYSLOG
-$syslogserver = 'syslog.company.local';
+$syslog_server = 'syslog.company.local';
 //SIP
-$sipproxy = 'sip.company.local';
+$sip_proxy = 'sip.company.local';
+//SIP INTERVALS, SECs
+$sip_reg_retry_int = '30';
+$sip_reg_retry_long_int = '180';
 //LDAP
-$ldapname = 'ldapname';
-$ldapserver = 'ldap.company.local';
-$ldapuser = 'ldapuser';
-$ldappwd = 'ldappasswd';
-$ldapsn = 'sn:(sn=*$VALUE*)';
-$ldapcn = 'cn:(cn=*$VALUE*)';
-$ldapdn = 'cn=ldapuser,ou=people,dc=company,dc=local';
-$ldapsearch = 'ou=people,dc=company,dc=local';
-$ldapfilter3 = 'telephonenumber:(telephonenumber=*$VALUE*)';
-$ldapfilter4 = 'mobile:(mobile=*$VALUE*)';
-$ldapdisplay3 = 'Exten';
-$ldapdisplay4 = 'Mobile';
-$ldapdisplay = 'a=givenName;a=telephoneNumber,n=Внутренний,t=p;a=mobile,n=Мобильный,t=p;';
+$ldap_name = 'ldapname';
+$ldap_auth_method = 'Simple';
+$ldap_server = 'ldap.company.local';
+$ldap_user = 'ldapuser';
+$ldap_pwd = 'ldappasswd';
+$ldap_sn = 'sn:(sn=*$VALUE*)';
+$ldap_cn = 'cn:(cn=*$VALUE*)';
+$ldap_dn = 'cn=ldapuser,ou=people,dc=company,dc=local';
+$ldap_search = 'ou=people,dc=company,dc=local';
+$ldap_filter3 = 'telephonenumber:(telephonenumber=*$VALUE*)';
+$ldap_filter4 = 'mobile:(mobile=*$VALUE*)';
+$ldap_display3 = 'Exten';
+$ldap_display4 = 'Mobile';
+$ldap_display = 'a=givenName;a=telephoneNumber,n=Внутренний,t=p;a=mobile,n=Мобильный,t=p;';
 //CISCO SPA
 $admin_password = 'ciscoWEBpassword';
 $textlogo = 'YouLogo';
