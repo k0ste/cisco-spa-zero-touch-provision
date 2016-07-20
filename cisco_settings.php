@@ -40,10 +40,18 @@ echo <<<XML
   <Reg_Retry_Intvl group="SIP/SIP_Timer_Values__sec_">$sip_reg_retry_int</Reg_Retry_Intvl>
   <Reg_Retry_Long_Intvl group="SIP/SIP_Timer_Values__sec_">$sip_reg_retry_long_int</Reg_Retry_Long_Intvl>
 //EXT2-4
-//Disable 2-4 lines
+//Disable 2-12 lines
   <Line_Enable_2_ ua="na">No</Line_Enable_2_>
   <Line_Enable_3_ ua="na">No</Line_Enable_3_>
   <Line_Enable_4_ ua="na">No</Line_Enable_4_>
+  <Line_Enable_5_ ua="na">No</Line_Enable_5_>
+  <Line_Enable_6_ ua="na">No</Line_Enable_6_>
+  <Line_Enable_7_ ua="na">No</Line_Enable_7_>
+  <Line_Enable_8_ ua="na">No</Line_Enable_8_>
+  <Line_Enable_9_ ua="na">No</Line_Enable_9_>
+  <Line_Enable_10_ ua="na">No</Line_Enable_10_>
+  <Line_Enable_11_ ua="na">No</Line_Enable_11_>
+  <Line_Enable_12_ ua="na">No</Line_Enable_12_>
 //EXT1
 //Enable 1st line
   <Line_Enable_1_ ua="na">Yes</Line_Enable_1_>
@@ -107,12 +115,21 @@ echo <<<XML
   <Time_Zone ua="na">GMT</Time_Zone>
   <Ignore_DHCP_Time_Offset ua="na">No</Ignore_DHCP_Time_Offset>
 //PHONE
-//Line Keys
-  <Extension_1_ ua="na">1</Extension_1_>
-  <Short_Name_1_ ua="na">$state</Short_Name_1_>
+//Disable Line Keys 2-12
   <Extension_2_ ua="na">Disabled</Extension_2_>
   <Extension_3_ ua="na">Disabled</Extension_3_>
   <Extension_4_ ua="na">Disabled</Extension_4_>
+  <Extension_5_ ua="na">Disabled</Extension_5_>
+  <Extension_6_ ua="na">Disabled</Extension_6_>
+  <Extension_7_ ua="na">Disabled</Extension_7_>
+  <Extension_8_ ua="na">Disabled</Extension_8_>
+  <Extension_9_ ua="na">Disabled</Extension_9_>
+  <Extension_10_ ua="na">Disabled</Extension_10_>
+  <Extension_11_ ua="na">Disabled</Extension_11_>
+  <Extension_12_ ua="na">Disabled</Extension_12_>
+//Enable Line Key 1
+  <Extension_1_ ua="na">1</Extension_1_>
+  <Short_Name_1_ ua="na">$state</Short_Name_1_>
 //Logo
   <Text_Logo ua="na">$textlogo</Text_Logo>
   <Select_Background_Picture ua="na">Text Logo</Select_Background_Picture>
