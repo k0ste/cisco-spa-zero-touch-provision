@@ -1,20 +1,23 @@
 <?php
-//MySQL
+/* MySQL */
 $mysql_host = 'database.company.local';
 $mysql_user = 'user';
 $mysql_pwd = 'passwd';
 $mysql_db = 'www_asterisk';
-//NTP
+/* CDP and LLDP-MED */
+$enable_cdp = 'Yes';
+$enable_lldp = 'Yes';
+/* NTP */
 $ntp_primary = 'ru.pool.ntp.org';
 $ntp_secondary = 'ntp1.stratum2.ru';
-//SYSLOG
+/* SYSLOG */
 $syslog_server = 'syslog.company.local';
-//SIP
+/* SIP */
 $sip_proxy = 'sip.company.local';
-//SIP INTERVALS, SECs
+/* SIP INTERVALS, SECs */
 $sip_reg_retry_int = '30';
 $sip_reg_retry_long_int = '180';
-//LDAP
+/* LDAP */
 $ldap_name = 'ldapname';
 $ldap_auth_method = 'Simple';
 $ldap_server = 'ldap.company.local';
@@ -29,7 +32,7 @@ $ldap_filter4 = 'mobile:(mobile=*$VALUE*)';
 $ldap_display3 = 'Exten';
 $ldap_display4 = 'Mobile';
 $ldap_display = 'a=givenName;a=telephoneNumber,n=Внутренний,t=p;a=mobile,n=Мобильный,t=p;';
-//CISCO SPA
+/* CISCO SPA */
 $admin_password = 'ciscoWEBpassword';
 $textlogo = 'YouLogo';
 $reg = '$VERSION ($MAU)';
@@ -43,7 +46,7 @@ $upgrade_rule_SPA51x = 'http://cisco.company.local/cisco/firmware/spa51x-7-6-1.b
 $dialplan = '(9xxxxxxxxxS0|8xxxxxxxxxxS0|7xxxxxxxxxxS0|xxxxxxxxxx)';
 $dict = 'serv=http://cisco.company.local/cisco/dict/;d0=English;x0=spa50x_30x_en_v756.xml;d1=Russian;x1=spa50x_30x_ru_v756.xml;';
 $deflanguage = 'Russian';
-//SPEED DIAL
+/* SPEED DIAL */
 $speed_dial3 = '20473';
 $speed_dial4 = '20474';
 $speed_dial5 = '20475';

@@ -24,8 +24,9 @@ echo <<<XML
   <PC_Port_VLAN_Highest_Priority ua="na">No Limit</PC_Port_VLAN_Highest_Priority>
   <Enable_PC_Port_VLAN_Tagging ua="na">No</Enable_PC_Port_VLAN_Tagging>
   <PC_Port_VLAN_ID ua="na">1</PC_Port_VLAN_ID>
-//CDP
-  <Enable_CDP ua="na">Yes</Enable_CDP>
+// CDP and LLDP-MED
+  <Enable_CDP ua="na">$enable_cdp</Enable_CDP>
+  <Enable_LLDP-MED ua="na">$enable_lldp</Enable_LLDP-MED>
 //NTP
   <NTP_Enable ua="na">Yes</NTP_Enable>
   <Primary_NTP_Server ua="na">$ntp_primary</Primary_NTP_Server>
