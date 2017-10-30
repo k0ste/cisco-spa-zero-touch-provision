@@ -13,7 +13,7 @@ else {
 $link = mysqli_connect($mysql_host, $mysql_user, $mysql_pwd, $mysql_db);
 
 if (!$link)
-  exit('Error (' . mysqli_errno() . '): ' . mysqli_error(). "\n");
+  exit('Connection error: ' . mysqli_connect_error() . "\n");
 
 mysqli_query($link, "SET NAMES 'utf8'");
 

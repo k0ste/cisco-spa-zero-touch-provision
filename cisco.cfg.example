@@ -41,17 +41,17 @@ $mau = '$MAU';
 $pn = '$PN';
 $notify = '$NOTIFY';
 $proxy = '$PROXY';
-$upgrade_rule_SPA50x_30x = '( $SWVER lt 7.5.2b )? http://cisco.company.local/cisco/firmware/spa50x-30x-7-5-2b.bin | http://cisco.company.local/cisco/firmware/spa50x-30x-7-6-1.bin';
-$upgrade_rule_SPA51x = 'http://cisco.company.local/cisco/firmware/spa51x-7-6-1.bin';
+$upgrade_rule_SPA50x_30x = '( $SWVER lt 7.5.2b )? http://cisco.company.local/cisco/firmware/spa50x-30x-7-5-2b.bin | http://cisco.company.local/cisco/firmware/spa50x-30x-7-6-2.bin';
+$upgrade_rule_SPA51x = 'http://cisco.company.local/cisco/firmware/spa51x-7-6-2.bin';
 $dialplan = '(9xxxxxxxxxS0|8xxxxxxxxxxS0|7xxxxxxxxxxS0|xxxxxxxxxx)';
 $dict = 'serv=http://cisco.company.local/cisco/dict/;d0=English;x0=spa50x_30x_en_v756.xml;d1=Russian;x1=spa50x_30x_ru_v756.xml;';
 $deflanguage = 'Russian';
 /* SPEED DIAL */
-$speed_dial3 = '20473';
-$speed_dial4 = '20474';
-$speed_dial5 = '20475';
-$speed_dial6 = '20666';
-$speed_dial7 = '20777';
+$speed_dial3 = '911';
+$speed_dial4 = '';
+$speed_dial5 = '';
+$speed_dial6 = '';
+$speed_dial7 = '';
 $speed_dial8 = '';
-$speed_dial9 = '20911';
+$speed_dial9 = '';
 ?>
