@@ -2,14 +2,13 @@
 header("Content-Type: text/xml; charset=UTF-8");
 echo <<<XML
 <flat-profile>
-//SYSTEM
-//Web
+// Web
   <Enable_Web_Server ua="na">Yes</Enable_Web_Server>
   <Web_Server_Port ua="na">80</Web_Server_Port>
   <Enable_Web_Admin_Access ua="na">Yes</Enable_Web_Admin_Access>
   <Admin_Passwd ua="na">$admin_password</Admin_Passwd>
   <User_Password ua="rw"></User_Password>
-//Network
+// Network
   <Connection_Type ua="rw">DHCP</Connection_Type>
   <Use_Backup_IP ua="na">No</Use_Backup_IP>
   <Static_IP ua="rw"></Static_IP>
@@ -18,7 +17,7 @@ echo <<<XML
   <HostName ua="rw"></HostName>
   <Domain ua="rw"></Domain>
   <Enable_SSLv3 ua="na">No</Enable_SSLv3>
-//VLAN
+// VLAN
   <Enable_VLAN ua="na">No</Enable_VLAN>
   <VLAN_ID ua="na">1</VLAN_ID>
   <PC_Port_VLAN_Highest_Priority ua="na">No Limit</PC_Port_VLAN_Highest_Priority>
@@ -36,12 +35,12 @@ echo <<<XML
   <Debug_Server ua="na"></Debug_Server>
   <Debug_Level ua="na">0</Debug_Level>
   <Layer_2_Logging ua="na">No</Layer_2_Logging>
-//SIP
+// SIP
   <SIP_Reg_User_Agent_Name ua="na">$reg</SIP_Reg_User_Agent_Name>
   <Reg_Retry_Intvl group="SIP/SIP_Timer_Values__sec_">$sip_reg_retry_int</Reg_Retry_Intvl>
   <Reg_Retry_Long_Intvl group="SIP/SIP_Timer_Values__sec_">$sip_reg_retry_long_int</Reg_Retry_Long_Intvl>
-//EXT2-4
-//Disable 2-12 lines
+// EXT2-4
+// Disable 2-12 lines
   <Line_Enable_2_ ua="na">No</Line_Enable_2_>
   <Line_Enable_3_ ua="na">No</Line_Enable_3_>
   <Line_Enable_4_ ua="na">No</Line_Enable_4_>
@@ -53,10 +52,10 @@ echo <<<XML
   <Line_Enable_10_ ua="na">No</Line_Enable_10_>
   <Line_Enable_11_ ua="na">No</Line_Enable_11_>
   <Line_Enable_12_ ua="na">No</Line_Enable_12_>
-//EXT1
-//Enable 1st line
+// EXT1
+// Enable 1st line
   <Line_Enable_1_ ua="na">Yes</Line_Enable_1_>
-//Network
+// Network
   <Proxy_1_ ua="na">$sip_proxy</Proxy_1_>
   <SIP_Port_1_ ua="na">5060</SIP_Port_1_>
   <SIP_Transport_1_ ua="na">UDP</SIP_Transport_1_>
@@ -71,13 +70,13 @@ echo <<<XML
   <RTP_CoS_Value_1_ ua="na">6</RTP_CoS_Value_1_>
   <Network_Jitter_Level_1_ ua="na">high</Network_Jitter_Level_1_>
   <Jitter_Buffer_Adjustment_1_ ua="na">up and down</Jitter_Buffer_Adjustment_1_>
-//Auth
+// Auth
   <User_ID_1_ ua="na">$channel</User_ID_1_>
   <Password_1_ ua="na">$pass</Password_1_>
-//Settings
+// Settings
   <Default_Ring__1__ ua="rw">No Ring</Default_Ring__1__>
   <Dial_Plan_1_ ua="na">$dialplan</Dial_Plan_1_>
-//Codecs
+// Codecs
   <G711u_Enable_1_ ua="na">Yes</G711u_Enable_1_>
   <G711a_Enable_1_ ua="na">Yes</G711a_Enable_1_>
   <G729a_Enable_1_ ua="na">No</G729a_Enable_1_>
@@ -93,7 +92,7 @@ echo <<<XML
   <Use_Pref_Codec_Only_1_ ua="na">No</Use_Pref_Codec_Only_1_>
   <Second_Preferred_Codec_1_ ua="na">G711u</Second_Preferred_Codec_1_>
   <Third_Preferred_Codec_1_ ua="na">Unspecified</Third_Preferred_Codec_1_>
-//PROVISION
+// Provision
   <Provision_Enable ua="na">Yes</Provision_Enable>
   <DHCP_Option_To_Use ua="na">66,160,159,150,60,43,125</DHCP_Option_To_Use>
   <Upgrade_Rule ua="na">$upgrade_rule</Upgrade_Rule>
@@ -106,12 +105,30 @@ echo <<<XML
   <Forced_Resync_Delay ua="na">1800</Forced_Resync_Delay>
   <Resync_Fails_On_FNF ua="na">Yes</Resync_Fails_On_FNF>
   <Resync_Error_Retry_Delay ua="na">60</Resync_Error_Retry_Delay>
-//Regional
-//Language
+// Regional
   <Dictionary_Server_Script ua="na">$dict</Dictionary_Server_Script>
   <Language_Selection ua="na">$deflanguage</Language_Selection>
   <Default_Character_Encoding ua="na">UTF-8</Default_Character_Encoding>
   <Locale ua="na">ru-RU</Locale>
+// Supplementary Services
+  <Conference_Serv ua="na">$conference_serv</Conference_Serv>
+  <Attn_Transfer_Serv ua="na">$attn_transfer_serv</Attn_Transfer_Serv>
+  <Blind_Transfer_Serv ua="na">$blind_transfer_serv</Blind_Transfer_Serv>
+  <DND_Serv ua="na">$dnd_serv</DND_Serv>
+  <Block_ANC_Serv ua="na">$block_anc_serv</Block_ANC_Serv>
+  <Call_Back_Serv ua="na">$call_back_serv</Call_Back_Serv>
+  <Block_CID_Serv ua="na">$block_cid_serv</Block_CID_Serv>
+  <Secure_Call_Serv ua="na">$secure_call_serv</Secure_Call_Serv>
+  <Cfwd_All_Serv ua="na">$cfwd_all_serv</Cfwd_All_Serv>
+  <Cfwd_Busy_Serv ua="na">$cfwd_busy_serv</Cfwd_Busy_Serv>
+  <Cfwd_No_Ans_Serv ua="na">$cfwd_no_ans_serv</Cfwd_No_Ans_Serv>
+  <Paging_Serv ua="na">$paging_serv</Paging_Serv>
+  <Call_Park_Serv ua="na">$call_park_serv</Call_Park_Serv>
+  <Call_Pick_Up_Serv ua="na">$call_park_up_serv</Call_Pick_Up_Serv>
+  <ACD_Login_Serv ua="na">$acd_login_serv</ACD_Login_Serv>
+  <Group_Call_Pick_Up_Serv ua="na">$group_call_pick_up_serv</Group_Call_Pick_Up_Serv>
+  <ACD_Ext ua="na">$acd_ext</ACD_Ext>
+  <Service_Annc_Serv ua="na">$service_annc_serv</Service_Annc_Serv>
 //Time
   <Time_Zone ua="na">GMT</Time_Zone>
   <Ignore_DHCP_Time_Offset ua="na">No</Ignore_DHCP_Time_Offset>
@@ -128,15 +145,15 @@ echo <<<XML
   <Extension_10_ ua="na">Disabled</Extension_10_>
   <Extension_11_ ua="na">Disabled</Extension_11_>
   <Extension_12_ ua="na">Disabled</Extension_12_>
-//Enable Line Key 1
+// Enable Line Key 1
   <Extension_1_ ua="na">1</Extension_1_>
   <Short_Name_1_ ua="na">$state</Short_Name_1_>
-//Logo
+// Logo
   <Text_Logo ua="na">$textlogo</Text_Logo>
   <Select_Background_Picture ua="na">Text Logo</Select_Background_Picture>
   <Softkey_Labels_Font ua="na">Auto</Softkey_Labels_Font>
   <Screen_Saver_Enable ua="na">No</Screen_Saver_Enable>
-//OpenLDAP
+// LDAP
   <LDAP_Dir_Enable ua="na">Yes</LDAP_Dir_Enable>
   <LDAP_Corp_Dir_Name ua="na">$ldap_name</LDAP_Corp_Dir_Name>
   <LDAP_Server ua="na">$ldap_server</LDAP_Server>
@@ -153,8 +170,8 @@ echo <<<XML
   <LDAP_item_4_Filter ua="na">$ldap_filter4</LDAP_item_4_Filter>
   <LDAP_Display_Attrs ua="na">$ldap_display</LDAP_Display_Attrs>
   <LDAP_Number_Mapping ua="na"/>
-//USER
-//Speed Dial
+// USER
+// Speed Dial
   <Speed_Dial_3 ua="na">$speed_dial3</Speed_Dial_3>
   <Speed_Dial_4 ua="na">$speed_dial4</Speed_Dial_4>
   <Speed_Dial_5 ua="na">$speed_dial5</Speed_Dial_5>
@@ -162,13 +179,13 @@ echo <<<XML
   <Speed_Dial_7 ua="na">$speed_dial7</Speed_Dial_7>
   <Speed_Dial_8 ua="na">$speed_dial8</Speed_Dial_8>
   <Speed_Dial_9 ua="na">$speed_dial9</Speed_Dial_9>
-//Call Waiting
+// Call Waiting
   <CW_Setting ua="rw">No</CW_Setting>
   <Preferred_Audio_Device ua="na">Headset</Preferred_Audio_Device>
-//Time
+// Time
   <Time_Format ua="rw">24hr</Time_Format>
   <Date_Format ua="rw">day/month</Date_Format>
-//LCD
+// LCD
   <LCD_Contrast ua="na">5</LCD_Contrast>
   <Back_Light_Timer ua="na">20 s</Back_Light_Timer>
 </flat-profile>

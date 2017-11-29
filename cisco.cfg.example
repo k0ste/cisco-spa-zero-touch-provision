@@ -54,4 +54,43 @@ $speed_dial6 = '';
 $speed_dial7 = '';
 $speed_dial8 = '';
 $speed_dial9 = '';
+/* Supplementary Services */
+/* Enable/disable Three way conference service. */
+$conference_serv = 'Yes';
+/* Enable/disable attended-call-transfer service. */
+$attn_transfer_serv = 'Yes';
+/* Enable/disable blind-call-transfer service. */
+$blind_transfer_serv = 'Yes';
+/* Enable/disable do-not-disturb service. */
+$dnd_serv = 'Yes';
+/* Enable/disable block-anonymous-call service. */
+$block_anc_serv = 'Yes';
+/* Enable/disable call-back (a.k.a. repeating dialing) service. */
+$call_back_serv = 'Yes';
+/* Enable/disable blocking outbound Caller-ID service. */
+$block_cid_serv = 'Yes';
+/* Enable/disable secure-call service. */
+$secure_call_serv = 'Yes';
+/* Enable/disable call-forward-all service. */
+$cfwd_all_serv = 'Yes';
+/* Enable/disable call-forward-on-busy service. */
+$cfwd_busy_serv = 'Yes';
+/* Enable/disable call-forward-on-no-answer service. */
+$cfwd_no_ans_serv = 'Yes';
+/* Enable/disable the paging service. */
+$paging_serv = 'Yes';
+/* Enable/disable the call park service. */
+$call_park_serv = 'Yes';
+/* Enable/disable the call pickup service. */
+$call_park_up_serv = 'Yes';
+/* Enable/disable the ACD Login Service, used for call centers. Typically
+enabled with the <SIP-B> parameter. */
+$acd_login_serv = 'No';
+/* Enable/disable the group call pickup service. */
+$group_call_pick_up_serv = 'Yes';
+/* The extension used for handling ACD calls. */
+$acd_ext = '1';
+/* Enable/disable sending announcement requests to a customer-supplied
+announcement server. */
+$service_annc_serv = 'No';
 ?>
