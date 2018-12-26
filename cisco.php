@@ -27,7 +27,7 @@ $query = sprintf("
 
 $result = mysqli_query($link, $query);
 
-if($result == 0) {
+if($result == false) {
   $channel = '0';
   $pass = '0';
   $state = 'WARNING (bad query)';
