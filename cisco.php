@@ -20,7 +20,8 @@ mysqli_query($link, "SET NAMES 'utf8'");
 $query = sprintf("
   SELECT
     spa.channel_def AS chan,
-    spa.mac AS mac
+    spa.mac AS mac,
+    spa.exten AS exten
   FROM
     cts_pbx_accounts spa
   WHERE spa.mac='%s'", mysqli_real_escape_string($link, $_GET['mac']));
@@ -40,7 +41,7 @@ else if(($num_rows = mysqli_num_rows($result)) == 0) {
 else while($row = mysqli_fetch_array($result)) {
   $channel = $row['chan'];
   $pass = $row['mac'];
-  $state = 'OK (chan found)';
+  $state = $row['exten'];
 }
 
 mysqli_free_result($result);
