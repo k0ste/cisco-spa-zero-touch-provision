@@ -149,7 +149,7 @@ echo <<<XML
   <Extension_1_ ua="na">1</Extension_1_>
   <Short_Name_1_ ua="na">$state</Short_Name_1_>
 // Logo
-  <Text_Logo ua="na">$textlogo</Text_Logo>
+  <Text_Logo ua="na">$textlogo - $callerid</Text_Logo>
   <Select_Background_Picture ua="na">Text Logo</Select_Background_Picture>
   <Softkey_Labels_Font ua="na">Auto</Softkey_Labels_Font>
   <Screen_Saver_Enable ua="na">No</Screen_Saver_Enable>
